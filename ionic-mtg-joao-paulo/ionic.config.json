@@ -1,0 +1,7 @@
+{
+  "name": "app-mtg-tabs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

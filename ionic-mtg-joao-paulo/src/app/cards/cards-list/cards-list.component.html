@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Cartas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">cards-list</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list *ngFor="let card of cards">
+    <ion-item>
+      <ion-card routerLink="detail/{{card.id}}">
+        <ion-card-header>
+          <ion-card-title>{{card.name}}</ion-card-title>
+          <ion-card-subtitle>{{card.type}}</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content style="display: flex;">
+          <ion-label>{{card.originalText}}</ion-label>
+          <img alt="Imagem" src="{{card.imageUrl}}" />
+        </ion-card-content>
+      </ion-card>
+    </ion-item>
+  </ion-list>
+</ion-content>
